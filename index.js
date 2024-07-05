@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 9000
+
 
 app.get('/', (req, res) => {
   res.send('Hello, World! Learning CI/CD Pipeline');
